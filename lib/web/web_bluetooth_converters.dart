@@ -11,11 +11,11 @@ class WebBluetoothConverters {
   /// same object (down to the api), but it helps to have the data in a native
   /// friendly data.
   ///
-  static ByteData convertJSDataViewToByteData(Object _jsObject) {
-    final byteLength = _JSUtil.getProperty(_jsObject, 'byteLength') as int;
+  static ByteData convertJSDataViewToByteData(Object jsObject) {
+    final byteLength = _JSUtil.getProperty(jsObject, 'byteLength') as int;
     final byteData = ByteData(byteLength);
     for (var i = 0; i < byteLength; i++) {
-      final value = _JSUtil.callMethod(_jsObject, 'getUint8', [i]) as int;
+      final value = _JSUtil.callMethod(jsObject, 'getUint8', [i]) as int;
       byteData.setUint8(i, value);
     }
     return byteData;

@@ -4,9 +4,9 @@ import 'dart:io';
 
 Future<int> main() async {
   final dir = File(Platform.script.toFilePath()).parent;
-  final servicesFile = File(dir.path + "/services_uuids.csv");
-  final characteristicsFile = File(dir.path + "/characteristics_uuids.csv");
-  final outputFile = File(dir.path + "/output.dart");
+  final servicesFile = File("${dir.path}/services_uuids.csv");
+  final characteristicsFile = File("${dir.path}/characteristics_uuids.csv");
+  final outputFile = File("${dir.path}/output.dart");
 
   if (await outputFile.exists()) {
     stderr.writeln("Output file already exists!");

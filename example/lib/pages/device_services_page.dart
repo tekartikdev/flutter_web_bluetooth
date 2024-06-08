@@ -37,7 +37,7 @@ class DeviceServicesState extends State<DeviceServicesPage> {
                           ScaffoldMessenger.maybeOf(context)
                               ?.showSnackBar(SnackBar(
                             content: const Text('This device has no gatt'),
-                            backgroundColor: theme.errorColor,
+                            backgroundColor: theme.colorScheme.error,
                           ));
                           return;
                         }

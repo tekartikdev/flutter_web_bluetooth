@@ -66,7 +66,7 @@ class RequestFilterBuilder {
         _services = services {
     if (_name == null &&
         _namePrefix == null &&
-        (_services == null || _services?.isEmpty == true)) {
+        (_services == null || _services.isEmpty == true)) {
       throw StateError(
           'No filter parameters have been set, you may want to use '
           '[RequestOptionsBuilder.acceptAllDevices()]!');

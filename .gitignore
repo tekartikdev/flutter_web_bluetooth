@@ -21,3 +21,5 @@ flutter*.log
 .idea/
 *.iml
 .vscode/
+
+pubspec.lock

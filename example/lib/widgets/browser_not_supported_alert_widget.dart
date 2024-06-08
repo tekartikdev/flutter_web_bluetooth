@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_linkify/flutter_linkify.dart';
 import 'package:flutter_web_bluetooth_example/web_helpers/web_helpers.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import 'package:web_browser_detect/web_browser_detect.dart';
 
 class BrowserNotSupportedAlertWidget extends StatelessWidget {
@@ -12,10 +12,10 @@ class BrowserNotSupportedAlertWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final browser = Browser.detectOrNull();
     final theme = Theme.of(context);
-    final textStyle = theme.textTheme.bodyText1;
+    final textStyle = theme.textTheme.bodySmall;
     final boldStyle =
-        theme.textTheme.bodyText1?.copyWith(fontWeight: FontWeight.bold);
-    final linkStyle = theme.textTheme.bodyText1?.copyWith(
+        theme.textTheme.bodySmall?.copyWith(fontWeight: FontWeight.bold);
+    final linkStyle = theme.textTheme.bodySmall?.copyWith(
         color: theme.colorScheme.secondary,
         decoration: TextDecoration.underline);
 
@@ -58,7 +58,7 @@ class BrowserNotSupportedAlertWidget extends StatelessWidget {
           // style: textStyle,
           linkStyle: linkStyle,
           onOpen: (link) {
-            launch('https://caniuse.com/web-bluetooth');
+            launchUrlString('https://caniuse.com/web-bluetooth');
           },
         )),
       ])),

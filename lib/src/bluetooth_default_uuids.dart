@@ -18,8 +18,8 @@ abstract class BluetoothDefaultUUIDS {
 
 class BluetoothDefaultServiceUUIDS extends BluetoothDefaultUUIDS {
   const BluetoothDefaultServiceUUIDS._(
-      String name, String uuid16, String uuid, int ordinal)
-      : super._(name, uuid16, uuid, ordinal);
+      super.name, super.uuid16, super.uuid, super.ordinal)
+      : super._();
 
   static const GENERIC_ATTRIBUTE = BluetoothDefaultServiceUUIDS._(
       'Generic Attribute', '1801', '00001801-0000-1000-8000-00805f9b34fb', 0);
@@ -246,8 +246,8 @@ class BluetoothDefaultServiceUUIDS extends BluetoothDefaultUUIDS {
 
 class BluetoothDefaultCharacteristicUUIDS extends BluetoothDefaultUUIDS {
   const BluetoothDefaultCharacteristicUUIDS._(
-      String name, String uuid16, String uuid, int ordinal)
-      : super._(name, uuid16, uuid, ordinal);
+      super.name, super.uuid16, super.uuid, super.ordinal)
+      : super._();
 
   static const DEVICE_NAME = BluetoothDefaultCharacteristicUUIDS._(
       'Device Name', '2a00', '00002a00-0000-1000-8000-00805f9b34fb', 0);
